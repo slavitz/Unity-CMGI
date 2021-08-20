@@ -1,0 +1,5 @@
+This is just a basic implementation of the paper here http://www.jcgt.org/published/0008/02/01/paper-lowres.pdf. My algorithm uses cube mapping instead of ray tracing to get the depth and rgb data. Right now it is quite slow and still slightly buggy, but I thought I'd post it anyway.
+
+Future work could include rendering cube maps in a single pass with geometry shaders as per this link: http://thegraphicguysquall.blogspot.com/2018/11/single-pass-dynamic-cube-mapping-in.html, but a Windows machine would be necessary to make it work.
+
+There's also the possibility of using Unity's new DXR ray tracing compute shaders to generate the depth and rgb data as well. This method would be by far the fastest (and is the technique used in the original paper), but it would potentially be necessary to write a custom deferred renderer to post process the rgb data that would come out of the ray tracing which would be quite the undertaking.
